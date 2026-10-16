@@ -1,0 +1,10 @@
+import React,{useState} from 'react';
+import {render,screen,fireEvent,cleanup} from '@testing-library/react';
+import {afterEach,it,expect,vi} from 'vitest';
+import {Quiz,Exam} from './main';
+import {questions} from './data';
+import {initial,type State} from './core';
+afterEach(()=>{cleanup();localStorage.clear();vi.useRealTimers();});
+it('gives feedback and records one answer only',()=>{const record=vi.fn();render(<Quiz list={[questions[0]]} record={record}/>);fireEvent.click(screen.getByRole('button',{name:'2 りょこう'}));fireEvent.click(screen.getByRole('button',{name:'Check answer'}));expect(screen.getByRole('status')).toHaveTextContent('Correct');expect(record).toHaveBeenCalledOnce();expect(screen.queryByRole('button',{name:'Check answer'})).toBeNull();});
+it('starts, answers, navigates, submits and reviews all sections',()=>{function Harness(){const[s,setS]=useState<State>({...initial});return <Exam s={s} setS={setS}/>;}render(<Harness/>);fireEvent.click(screen.getByRole('button',{name:/Start timed practice/}));fireEvent.click(screen.getByRole('button',{name:'2 りょこう'}));fireEvent.click(screen.getByRole('button',{name:'Question 2'}));fireEvent.click(screen.getByRole('button',{name:'1 借ります'}));fireEvent.click(screen.getByRole('button',{name:/Finish section/}));fireEvent.click(screen.getByRole('button',{name:'2 こと'}));fireEvent.click(screen.getByRole('button',{name:/Finish section/}));fireEvent.click(screen.getByRole('button',{name:'2 黒いかばん'}));fireEvent.click(screen.getByRole('button',{name:'Submit exam'}));expect(screen.getByRole('heading',{name:'4 / 10 correct'})).toBeInTheDocument();expect(screen.getAllByText(/Your answer:/)).toHaveLength(10);expect(localStorage.getItem('sakura-exam')).toBeNull();});
+it('automatically locks an expired section',()=>{vi.useFakeTimers();localStorage.setItem('sakura-exam',JSON.stringify({id:'expired',section:0,deadline:Date.now()-1,answers:{}}));render(<Exam s={initial} setS={vi.fn()}/>);expect(screen.getByRole('heading',{name:'Grammar & reading'})).toBeInTheDocument();});
