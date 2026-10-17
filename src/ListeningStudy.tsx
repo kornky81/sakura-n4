@@ -1,0 +1,6 @@
+import {useState} from 'react';
+import {Audio} from './Audio';
+import {listeningItems} from './exam-model';
+import type {Question} from './data';
+import {Quiz} from './main';
+export function ListeningStudy({romaji,record}:{romaji:boolean;record:(q:Question,a:number)=>void}){const[index,setIndex]=useState(0);const q=listeningItems[index];return <><div className="page-title"><div className="eyebrow">TUNE IN TO EVERYDAY JAPANESE</div><h1>Japanese listening studio</h1><p>28 original listening tasks with static recordings. No system voice is required for the audio player.</p></div><label>Choose an exercise<select value={index} onChange={e=>setIndex(+e.target.value)}>{listeningItems.map((item,i)=><option key={item.id} value={i}>{i+1}. {item.title}</option>)}</select></label><Audio text={q.spokenText||q.transcript||''} src={q.audioSrc}/><details className="card"><summary>Reveal transcript, readings and translations</summary><p lang="ja">{q.transcript}</p><p lang="ja">{q.kana||'Kana review pending'}</p>{romaji&&q.romaji&&<p>{q.romaji}</p>}<p>{q.translationNo}</p><p>{q.translationEn}</p><p className="notice">Synthetic single-narrator speech; internal content checks, independent teacher review pending.</p></details><Quiz key={q.id} list={[q]} record={record}/></>}

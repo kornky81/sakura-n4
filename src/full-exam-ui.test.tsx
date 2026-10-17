@@ -1,0 +1,10 @@
+import React,{useState} from 'react';
+import {it,expect,afterEach,vi} from 'vitest';
+import {cleanup,render,screen,fireEvent,act} from '@testing-library/react';
+import {Exam} from './Exam';
+import {fullExam,startExam} from './exam-model';
+import {initial,type State} from './core';
+afterEach(()=>{cleanup();localStorage.clear();vi.useRealTimers();});
+it('starts the full exam with its own 25-minute first section',()=>{render(<Exam s={initial} setS={vi.fn()}/>);fireEvent.click(screen.getByRole('button',{name:'Start full-length draft'}));expect(screen.getByRole('timer')).toHaveTextContent('25:00');expect(screen.getAllByRole('button',{name:/^Question \d/})).toHaveLength(28);expect(JSON.parse(localStorage.getItem('sakura-exam')!).examId).toBe('SAKURA-FULL-01');});
+it('hides listening transcript, translations and spoken alternatives until review',()=>{const s=startExam(fullExam);s.section=2;s.deadline=Date.now()+2100000;localStorage.setItem('sakura-exam',JSON.stringify(s));render(<Exam s={initial} setS={vi.fn()}/>);fireEvent.click(screen.getByRole('button',{name:'Question 16'}));expect(screen.getByRole('button',{name:'Answer 1'})).toBeInTheDocument();const q=fullExam.questions.find(q=>q.id==='fl16')!;expect(screen.queryByText(q.transcript!)).toBeNull();expect(screen.queryByText(q.translationEn!)).toBeNull();expect(screen.queryByText(q.options[0])).toBeNull();});
+it('automatically submits a fully expired exam once and records it in history',()=>{vi.useFakeTimers();const session=startExam(fullExam,Date.now()-7000000,'expired-full');localStorage.setItem('sakura-exam',JSON.stringify(session));function Harness(){const[s,setS]=useState<State>(initial);return <Exam s={s} setS={setS}/>;}render(<Harness/>);expect(screen.getByRole('heading',{name:'0 / 85 correct'})).toBeInTheDocument();act(()=>vi.advanceTimersByTime(2000));fireEvent.click(screen.getByRole('button',{name:'Back to exams'}));expect(screen.getAllByRole('button',{name:/Full Mock Exam 01.*0\/85/})).toHaveLength(1);expect(localStorage.getItem('sakura-exam')).toBeNull();});
