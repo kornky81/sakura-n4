@@ -64,7 +64,7 @@ boundaries instead of granting extra time after refresh. An added UI test found 
 and a display cap fixed it. Section submission requires explicit confirmation.
 Translations, transcript aids and spoken response text are absent during exam mode.
 
-## QA results
+## QA results before Preview deployment
 Final results for this source version are recorded after the final commands below.
 Commands: npm test; npm run build; python scripts/test_pipeline.py;
 python scripts/validate_mock.py. Audio checks verify every file hash, script hash,
@@ -77,7 +77,7 @@ Mobile emulation is not exposed by the supported controls; phone checks remain
 pending. Earlier desktop results describe the old deployed version only.
 
 ## Publication boundary
-Vercel is not connected to this session and GitHub has no Vercel status checks on
+At the pre-deployment stage, Vercel was not connected and GitHub had no Vercel status checks on
 the old branch head. Existing account settings could not be inspected. To prevent
 Git-triggered deployment during source publication, the feature branch now has an
 explicit false git.deploymentEnabled rule in vercel.json, following Vercel's
@@ -85,7 +85,7 @@ branch-scoped configuration documentation. This does not change protection or
 production settings. Any manual deployment, merge or release needs owner approval.
 No deployment, protection change, merge or paid service was performed in this work.
 
-## Student's next steps
+## Earlier next steps (before Preview deployment)
 Review the original Japanese/answer keys and listen to every recording; approve a
 Preview deployment for new-code desktop/phone checks; then update the final demo
 link in the submission if it changes. Student involvement and actual checks must
@@ -101,3 +101,38 @@ be rewritten to index.html. All 28 uploaded Git blob hashes match the local file
 The final expanded Python validator completed **6/6 tests**, exit 0; together with
 the pipeline tests this is **8 Python tests passed**. All 35 JavaScript tests and
 the production build had already passed after the final application-code changes.
+
+## Submission review — 17 October 2026
+Vercel dashboard inspected: deployment 7g6m32wHmz5QsETzgmtstk5CRY6w is Ready,
+Preview environment, feature/sakura-n4-mvp, exact source commit
+f4d830e8712151c07f854a79a291a05e02e7ba4f. URL:
+https://sakura-n4-eyjbpviob-kornky.vercel.app/
+The agent opened the Preview dashboard successfully. Production remains fe79cbc.
+PR #1 remains open, draft and unmerged with feature head f4d830e.
+
+The student explicitly reported successful manual desktop Chrome testing of
+Japanese MP3 playback, all three Full Mock Exam 01 sections, timers, navigation,
+submission and section-by-section results. These are student-reported results,
+not agent-observed audible playback. Mobile testing is in progress. No independent
+Japanese teacher/pronunciation certification or full 115-minute sitting is claimed.
+Earlier statements about no Preview/browser verification describe the earlier
+pre-deployment stage and are superseded by this dated entry. No deployment, merge,
+production promotion or access-setting change was performed during this review.
+
+## Final public-demo and documentation review — 17 October 2026
+The student supplied https://sakura-n4-n22chwc2z-kornky.vercel.app/ and explicitly
+confirmed that it opens in incognito without Vercel login. This is student-confirmed
+anonymous access, not an independent anonymous-session test by the agent. The
+latest URL-to-commit mapping was not independently checked in this review.
+The previous Preview had already been verified Ready on commit f4d830e.
+
+CSS-only commit 35c8b95a52c403fd6cb52bcefc172a070e332587 changed only the decorative
+circle's background to transparent; the production build passed after that change.
+The four submission documents were reviewed and corrected to use the public
+Preview and distinguish student desktop checks from pending mobile/teacher review.
+This update changes documentation only. Secret/private-key patterns and PDF paths
+were checked before upload. Remote vercel.json still disables Git deployments for
+feature/sakura-n4-mvp. No workflow files are present in the reviewed tree.
+No merge, redeployment, Production promotion or access-setting change is authorized
+or performed by this documentation update. Main is not disabled by that branch rule;
+check Vercel's production-branch behavior before authorizing any future merge.

@@ -3,14 +3,21 @@ A Japanese study prototype for Oblig 3, built with React, TypeScript, Vite,
 Tailwind CSS and React Router. Supabase is a future integration; the app works
 without credentials and saves study progress locally in the browser.
 
-Existing live demo: https://sakura-n4.vercel.app/
+Submission Preview: https://sakura-n4-n22chwc2z-kornky.vercel.app/
+Older Production demo: https://sakura-n4.vercel.app/
 Repository: https://github.com/kornky81/sakura-n4
 Feature branch: https://github.com/kornky81/sakura-n4/tree/feature/sakura-n4-mvp
 PR: https://github.com/kornky81/sakura-n4/pull/1
 
-**The existing demo has not been redeployed in this update.** New source features
-below require an authorized deployment and browser verification before they are
-claimed as live/complete.
+The student supplied the latest public Preview above and confirmed incognito
+access without Vercel login on 17 October 2026. The prior Preview was verified
+Ready on application commit f4d830e; the subsequent CSS-only commit 35c8b95
+removes the decorative circular backdrop. The latest URL-to-commit mapping has
+not been independently checked during this documentation review.
+On 17 October 2026 the student confirmed desktop Chrome MP3 playback, all three
+full-mock sections, timers/navigation, submission and section results. Production
+remains the older version. Mobile testing is in progress; independent language
+and pronunciation review remains pending.
 
 ## Features
 - Dashboard: selected exam date/countdown, daily plan, streak and real activity.
@@ -63,8 +70,8 @@ The approximate task-count blueprint comes from the official JLPT update:
 https://www.jlpt.jp/sp/e/topics/202009091599642827.html
 All questions, dialogues and passages here are original AI-assisted drafts, not
 copied official questions. See CONTENT_REVIEW.md for the category breakdown,
-internal checks, uncertain items and required manual review. Independent teacher
-review, real-browser playback of the new files and mobile testing are pending.
+internal checks, uncertain items and required manual review. Independent teacher review and mobile testing remain pending. Desktop Chrome
+playback and exam flows were confirmed by the student on 17 October 2026.
 
 The listening files contain about 11 minutes of synthetic speech, with remaining
 section time for reading/responding/replay. Playback is manual; visual tasks use
@@ -135,8 +142,9 @@ YouTube playlist contents remain labeled unverified.
 ## Limitations and verification boundary
 The old deployed version passed real desktop smoke tests for settings, grammar,
 kanji review, reading, short-exam submission and persistence on 17 October 2026.
-The new player/full-exam UI has automated component/logic tests but no new real
-browser/mobile session yet. Local media access is blocked by the cloud browser.
+The student confirmed the new Preview player/full-exam flows in desktop Chrome.
+The agent verified the Ready Preview commit/environment and opened its dashboard.
+Mobile testing remains in progress; no full 115-minute sitting is claimed.
 Static audio decoding and non-silence checks do not substitute for listening.
 See CONTENT_REVIEW.md before calling Full Mock Exam 01 complete. No comprehensive
 N4 curriculum, account system, advanced adaptive learning, licensed audio library
