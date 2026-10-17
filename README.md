@@ -1,25 +1,106 @@
 # Sakura N4 🌸
-A Japanese study prototype for Oblig 3, built with React, TypeScript, Vite,
-Tailwind CSS and React Router. Supabase is a future integration; the app works
-without credentials and saves study progress locally in the browser.
 
-Submission Preview: https://sakura-n4-n22chwc2z-kornky.vercel.app/
-Older Production demo: https://sakura-n4.vercel.app/
-Repository: https://github.com/kornky81/sakura-n4
-Feature branch: https://github.com/kornky81/sakura-n4/tree/feature/sakura-n4-mvp
-PR: https://github.com/kornky81/sakura-n4/pull/1
+## Oblig 3 – Sakura N4
 
-The student supplied the latest public Preview above and confirmed incognito
-access without Vercel login on 17 October 2026. The prior Preview was verified
-Ready on application commit f4d830e; the subsequent CSS-only commit 35c8b95
-removes the decorative circular backdrop. The latest URL-to-commit mapping has
-not been independently checked during this documentation review.
-On 17 October 2026 the student confirmed desktop Chrome MP3 playback, all three
-full-mock sections, timers/navigation, submission and section results. Production
-remains the older version. Mobile testing is in progress; independent language
-and pronunciation review remains pending.
+## Building a Japanese Learning Application Using Generative AI and Vibe Coding
 
-## Features
+### 1. Application Description and Purpose
+
+**Sakura N4** is an interactive web application designed to help students prepare for the Japanese Language Proficiency Test (JLPT) N4.
+
+The purpose of the application is to make Japanese language learning more accessible, structured, and engaging through interactive exercises, listening practice, and exam preparation.
+
+The application was developed using **React, TypeScript, Vite, and Tailwind CSS**, with the assistance of generative AI.
+
+Sakura N4 includes the following features:
+
+- **Kanji practice:** Interactive kanji cards with readings, meanings, and example vocabulary.
+- **Vocabulary and grammar:** Japanese vocabulary exercises, grammar questions, and explanations.
+- **Reading comprehension:** Japanese reading exercises with comprehension questions.
+- **Listening comprehension:** Japanese audio recordings with accompanying questions and optional transcripts.
+- **Mock examinations:** A shortened practice exam and Full Mock Exam 01, containing 85 original questions divided into vocabulary, grammar and reading, and listening sections.
+- **Exam preparation:** A countdown to the selected JLPT examination date, learning progress tracking, and locally saved results.
+
+Full Mock Exam 01 uses a total examination time of 115 minutes, divided into three timed sections.
+
+The application is accessible through a web browser and has also been opened successfully on a mobile device.
+
+### 2. How I Used Generative AI
+
+I developed Sakura N4 using the Vibe Coding approach described in the assignment.
+
+Instead of manually writing the entire application, I described the desired functionality in natural language and used **ChatGPT and AI coding agents** to assist with development.
+
+Generative AI was used to:
+
+- Brainstorm the application concept and plan its features.
+- Design the application architecture and user interface.
+- Generate React and TypeScript code.
+- Create original Japanese learning exercises and sample examination questions.
+- Implement interactive quizzes, timers, and progress tracking.
+- Develop Japanese audio listening functionality.
+- Generate automated tests and investigate technical errors.
+- Improve the application based on testing and feedback.
+- Prepare documentation and deployment instructions.
+
+My role was to define the requirements, make design and functionality decisions, review the development process, test the application, and direct improvements.
+
+This project helped me gain practical experience with AI-assisted software development, GitHub, application testing, and web deployment.
+
+### 3. Testing and Improvements
+
+During development, the application was tested and improved iteratively.
+
+The final reported automated testing results were:
+
+- **35 JavaScript tests passed.**
+- **8 Python tests passed.**
+- **The production build completed successfully.**
+
+I also manually tested the application using Google Chrome on Windows.
+
+The manual tests included Japanese audio playback, navigation between the three mock examination sections, countdown timers, answer selection, exam submission, and result calculation.
+
+The application was also opened on a mobile device, and the public demonstration link was tested in an incognito browser window without requiring a Vercel account.
+
+Examples of improvements made during development include:
+
+- Fixing an automated test runner that previously failed to terminate correctly.
+- Adding prerecorded Japanese audio to avoid depending entirely on installed browser speech voices.
+- Expanding the examination functionality from a short quiz to a longer, three-section practice examination.
+- Improving the handling of examination timers and saved answers.
+- Refining the user interface based on visual feedback.
+
+### 4. Limitations and Future Improvements
+
+Sakura N4 is a functional educational prototype rather than a complete JLPT preparation platform.
+
+The current learning dataset is limited, and the Japanese content and audio pronunciation would benefit from independent review by a qualified Japanese-language teacher.
+
+The mock examination is an original practice test and should not be considered an official JLPT examination or an official prediction of examination results.
+
+Future improvements could include expanding the N4 curriculum, adding more listening exercises and mock examinations, implementing cloud-based user accounts, and introducing more advanced progress tracking.
+
+### 5. Demo and Source Code
+
+**Live Application Demo:**\
+[https://sakura-n4-n22chwc2z-kornky.vercel.app/](https://sakura-n4-n22chwc2z-kornky.vercel.app/)
+
+**GitHub Repository:**\
+[https://github.com/kornky81/sakura-n4](https://github.com/kornky81/sakura-n4)
+
+**Application Source Code (Development Branch):**\
+[https://github.com/kornky81/sakura-n4/tree/feature/sakura-n4-mvp](https://github.com/kornky81/sakura-n4/tree/feature/sakura-n4-mvp)
+
+### 6. Conclusion
+
+Developing Sakura N4 demonstrated how generative AI can help turn an idea into a working software application through natural-language instructions, iterative testing, and continuous improvement.
+
+The project combines my interest in learning Japanese with practical experience in Vibe Coding and AI-assisted application development.
+
+---
+
+## Implementation details
 - Dashboard: selected exam date/countdown, daily plan, streak and real activity.
 - Eight kanji with 17 example-linked readings, status and simple review intervals.
 - Six vocabulary entries, four bilingual grammar lessons, quizzes and reading.
