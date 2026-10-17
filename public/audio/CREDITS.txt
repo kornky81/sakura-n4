@@ -1,0 +1,15 @@
+Sakura N4 original Japanese synthetic recordings
+Engine: pyopenjtalk 0.4.1 / Open JTalk (MIT / BSD-family software licenses).
+Voice: HTS Voice "Mei", MMDAgent Project Team, Nagoya Institute of Technology.
+Voice source: https://github.com/r9y9/pyopenjtalk/tree/master/pyopenjtalk/htsvoice
+Voice license: Creative Commons Attribution 3.0 Unported (CC BY 3.0).
+https://creativecommons.org/licenses/by/3.0/
+Full supplied voice notice is in VOICE-LICENSE.txt.
+
+These files synthesize original Sakura N4 Japanese scripts using that voice.
+Changes: newly synthesized speech, speed 0.88, pauses between sentences, encoded
+as mono MP3. Attribution is retained here and linked in the application's player.
+For caution the generated recordings are distributed under CC BY 3.0 too.
+No textbook, YouTube or third-party human recording is included. One synthetic
+narrator reads every speaker; this is disclosed and is not an official JLPT recording.
+No ElevenLabs generation was charged or included. No paid service was enabled.

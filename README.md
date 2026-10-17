@@ -1,51 +1,144 @@
 # Sakura N4 🌸
-A mobile-first Japanese study prototype for Oblig 3. Learn with short bilingual lessons, listen to an original dialogue, and complete a timed practice exam. All bundled educational text is original AI-assisted starter material, not copied textbook content.
+A Japanese study prototype for Oblig 3, built with React, TypeScript, Vite,
+Tailwind CSS and React Router. Supabase is a future integration; the app works
+without credentials and saves study progress locally in the browser.
 
-## Working features
-- Dashboard: configurable target date, calendar-day countdown, daily plan, real activity, streak and weak-subject recommendation.
-- Eight kanji, 17 example-linked readings, optional romaji, self-assessed status and fixed-interval review scheduling (10 minutes / 1 day / 4 days).
-- Six vocabulary entries, four grammar lessons, multiple-choice feedback, original message comprehension and Japanese browser TTS listening.
-- Ten-question **shortened practice** exam, three separately locked timed sections, navigation, refresh recovery, automatic checking, review and attempt history.
-- Local browser persistence, JSON progress export, responsive navigation, PWA manifest and basic runtime offline cache.
+Existing live demo: https://sakura-n4.vercel.app/
+Repository: https://github.com/kornky81/sakura-n4
+Feature branch: https://github.com/kornky81/sakura-n4/tree/feature/sakura-n4-mvp
+PR: https://github.com/kornky81/sakura-n4/pull/1
 
-## Stack and architecture
-React 19, TypeScript, Vite 6, Tailwind 4, React Router 7, Lucide, Vitest and React Testing Library. `src/data.ts` contains the reference starter set and original question provenance; `src/core.ts` isolates scoring/date/storage functions from UI. The browser is the working persistence layer, avoiding a cloud setup dependency. `supabase/migrations/001_initial.sql` models the future relational backend with RLS and non-public answer keys. Supabase client dependency is included but cloud authentication/sync is **not integrated**.
+**The existing demo has not been redeployed in this update.** New source features
+below require an authorized deployment and browser verification before they are
+claimed as live/complete.
 
-## Run
-Node 22.12+ recommended (verified here with Node 24.19).
+## Features
+- Dashboard: selected exam date/countdown, daily plan, streak and real activity.
+- Eight kanji with 17 example-linked readings, status and simple review intervals.
+- Six vocabulary entries, four bilingual grammar lessons, quizzes and reading.
+- Listening studio: 28 original tasks with bundled static MP3 files and native audio
+  controls. No Japanese system voice is needed for these files. Browser speech is
+  optional and handles missing voices; it is not the primary audio source.
+- Original transcripts, conventional kana readings and Norwegian/English summaries
+  can be revealed in learning mode and final exam review.
+- Existing ten-question Short Practice Exam (11:30), clearly separate from Full Mock
+  Exam 01, an **85-question full-length validation draft** with 25/55/35-minute
+  sections, 115 minutes total. It is not declared independently validated/complete.
+- Confirmation before section locking; saved answers, recovery after refresh,
+  automatic expiry/submission, results and separate short/full attempt histories.
+  Time away counts against deadlines; refreshing does not grant extra section time.
+- Progress export, responsive CSS, PWA manifest and basic runtime caching. Partial
+  audio range responses are not cached as complete files.
+
+## Run and test
+Node 22.12 or supported Node 24; verified here with Node 24.19.
 ```sh
 npm ci
 npm run dev
 ```
-Open the Vite URL shown in the terminal (normally http://localhost:5173).
+Open the terminal's Vite URL, normally http://localhost:5173.
 ```sh
 npm test
-python scripts/test_pipeline.py
 npm run build
-npm run preview
+python scripts/test_pipeline.py
+python scripts/validate_mock.py
 ```
+The audio validation command needs FFmpeg/ffprobe. Python/FFmpeg and the TTS engine
+are not needed to run the app: MP3 files are already included.
 
-## Deployment to Vercel
-No deployment has been created. After reviewing and authorizing public hosting:
-1. Import existing `kornky81/sakura-n4`, selecting `feature/sakura-n4-mvp` or a reviewed merged branch.
-2. Choose Vite, build command `npm run build`, output `dist`, install command `npm ci`.
-3. No environment variables are required for demo mode. `vercel.json` supports React Router refreshes.
-4. Deploy, test a deep link, mobile layout, audio voice availability and exam refresh recovery. Add the actual URL to SUBMISSION.md.
-HTTPS enables service workers. Offline assets are cached as visited, not a guaranteed full offline library. Japanese TTS may require an OS-installed voice and may not work offline. SVG-only icons and installation have not been device-tested; production mobile icons remain a follow-up.
+Vitest 4.1.12 replaces the older runner that stalled after tests completed. Tests
+cover countdown/scoring, data integrity, section deadlines/transitions, persistence,
+refresh recovery, final submission, hidden exam aids and audio fallback behavior.
+Actual final results are recorded in AI_DEVELOPMENT_LOG.md.
 
-## Database setup (future integration)
-Create a free Supabase project and run the migration in its SQL editor on a fresh database. Enable your chosen Auth provider. Copy only the project URL and public anon key to `.env.local` using `.env.example`; never put service-role keys in frontend variables. The migration has not been executed against a real database. Build and test server endpoints for starting/advancing/submitting exams before cloud exam writes: verify auth, server deadlines, option-question membership and immutable submission. RLS intentionally denies client writes to exam records/results and denies all client access to answer keys. Browser demo answers are visible in JS and are unsuitable for high-stakes assessment. Merely setting env variables does not activate cloud mode.
+## Original full-exam content
+| Section | Questions | Time |
+| --- | --- | --- |
+| Vocabulary | 28 | 25 minutes |
+| Grammar and reading | 29 | 55 minutes |
+| Listening | 28 | 35 minutes |
+| Total | 85 | 115 minutes |
 
-## Curriculum and sources
-The explicit starter reference is the eight characters in `src/data.ts`: 食 飲 駅 旅 働 貸 借 親. Level tags are approximate study labels, not official JLPT lists. Every included reading has one example, kana and romaji; this does not assert exhaustive reading coverage. Counts and script/relationship consistency are tested; independent dictionary/teacher verification, stroke-count verification and full N4 coverage are pending. Kanji self-ratings are distinguished from quiz accuracy. No rare-reading inventory or exceptional-reading lesson is yet included.
+The approximate task-count blueprint comes from the official JLPT update:
+https://www.jlpt.jp/sp/e/topics/202009091599642827.html
+All questions, dialogues and passages here are original AI-assisted drafts, not
+copied official questions. See CONTENT_REVIEW.md for the category breakdown,
+internal checks, uncertain items and required manual review. Independent teacher
+review, real-browser playback of the new files and mobile testing are pending.
 
-Official timing reference: https://www.jlpt.jp/e/guideline/testsections.html (N4 25/55/35 minutes). This app uses 2:30/5:30/3:30 for a 10-question sample, not a complete exam. Raw results are not scaled JLPT scores or pass predictions.
-Resources link to Jisho, JapaneseTest4You, NHK and official JLPT. The two supplied YouTube playlist contents remain unverified and are labeled accordingly. No recordings are downloaded. The supplied Langendoen PDF is excluded from source and has not been imported; no textbook explanations or exercises are reproduced.
+The listening files contain about 11 minutes of synthetic speech, with remaining
+section time for reading/responding/replay. Playback is manual; visual tasks use
+text-only adaptations and all voices use one synthetic narrator. These differences
+are disclosed. Scores are raw practice counts, never official scaled JLPT scores.
+Learning hints, translations and transcripts stay hidden in exam mode until review.
+Client-side answers remain inspectable; this is not high-stakes assessment software.
 
-## Authorized content workflow
-`python scripts/content_pipeline.py intake.json reviewed.json` validates draft records, detects exact duplicate content, and exports only original/licensed records marked verified. Required fields: id, type, source, license_status, review_status, content. Question content needs options, answer index and explanation. Optional `--pdf /private/file.pdf` requires `pip install pypdf` and only reports a page inventory. This is a review/validation scaffold, not automatic Japanese extraction or a license verifier. Human review is required before marking records verified.
+## Audio generation and licensing
+All 28 files in `public/audio` were generated from our original scripts using
+pyopenjtalk 0.4.1 / Open JTalk and HTS Voice **Mei** from the MMDAgent Project Team,
+Nagoya Institute of Technology. Attribution and the full voice notice are bundled
+in `public/audio/CREDITS.txt` and `VOICE-LICENSE.txt`. Generated recordings are
+conservatively distributed under CC BY 3.0 with attribution. No YouTube recording,
+textbook recording or cloned personal voice is included. No paid service was enabled
+or charged. The voice is synthetic and may sound less natural than a human speaker.
 
-## Verification and limitations
-See AI_DEVELOPMENT_LOG.md for actual results. No real browser/device QA or database integration test has been performed in this environment. Real-browser desktop/mobile review, Japanese voice playback and PWA installation are manual release checks. Content is small and requires qualified language review. No full mock exam, comprehensive syllabus, accounts, cloud sync, matching/sentence-order exercises, advanced adaptive scheduling, licensed PDF extraction or authorized audio library is claimed. Browser data belongs to this device/profile and is lost if site storage is cleared. Export progress for a backup; import is not implemented.
+To regenerate (optional developer workflow, use a virtual environment and a working
+C/C++ compiler if a wheel is unavailable):
+```sh
+pip install pyopenjtalk==0.4.1 numpy
+python scripts/build_mock_content.py
+python scripts/build_listening.py
+python scripts/generate_audio.py
+python scripts/validate_mock.py
+```
+FFmpeg must be on PATH. Open JTalk downloads its licensed dictionary on first use.
+The engine/model are not committed. `manifest.json` records source/audio hashes and
+file durations. Actual audible playback and pronunciation are not certified by a
+successful decode or unit test.
 
-Basic security: no secrets or PDF files are tracked; React escapes content; external links use noreferrer; runtime cache is same-origin GET only; no server/cloud integration is falsely exposed. Dependency and migration testing should be repeated before public release.
+## Deployment policy and Vercel settings
+`vercel.json` sets `git.deploymentEnabled["feature/sakura-n4-mvp"]` to `false` to
+prevent a Git-triggered Vercel deployment when this feature branch is updated.
+This branch-scoped source setting does not change deployment protection, the
+production branch or paid services. Other branches' settings are unchanged.
+Reference: https://vercel.com/docs/project-configuration/git-configuration
+
+No deployment should be made without the owner's approval. After approval, deploy
+this feature branch to an explicitly verified **Preview** target on the existing
+Vercel project: Vite, repository root, install `npm ci`, build `npm run build`, output
+`dist`, no Supabase variables. Do not import/deploy `main`, promote to Production,
+merge, change protection or enable paid services. Initial project deployments can
+be classified as Production, so do not use New Project's default Deploy blindly.
+Manual CLI deployment to an existing linked project uses an explicit target:
+```sh
+npx vercel@latest deploy --target=preview
+```
+Verify the environment and URL afterward. The source's Git auto-deploy disablement
+is not permission for a manual deployment. Offline caching is basic, not guaranteed
+full audio/offline synchronization; PWA installation is unverified.
+
+## Database and content expansion (future work)
+`supabase/migrations/001_initial.sql` prepares relational content/progress tables,
+Auth-linked users and default-deny RLS. It has not been applied to a live database.
+Cloud authentication/sync and secure server grading are not implemented. Setting
+`.env.local` alone does not enable cloud mode. Only public URL/anon placeholders
+belong in frontend configuration; privileged keys must stay server-side.
+
+`scripts/content_pipeline.py` validates authorized intake, detects exact duplicates
+and separates reviewed original/licensed records from the review queue. Optional
+PDF inventory needs pypdf and does not export textbook text. This is a review
+scaffold, not a license verifier or comprehensive PDF extraction system.
+The supplied textbook, official chart and proprietary question banks are excluded.
+Resource pages link to Jisho, NHK, JapaneseTest4You and official JLPT; supplied
+YouTube playlist contents remain labeled unverified.
+
+## Limitations and verification boundary
+The old deployed version passed real desktop smoke tests for settings, grammar,
+kanji review, reading, short-exam submission and persistence on 17 October 2026.
+The new player/full-exam UI has automated component/logic tests but no new real
+browser/mobile session yet. Local media access is blocked by the cloud browser.
+Static audio decoding and non-silence checks do not substitute for listening.
+See CONTENT_REVIEW.md before calling Full Mock Exam 01 complete. No comprehensive
+N4 curriculum, account system, advanced adaptive learning, licensed audio library
+or official exam equivalence is claimed. Browser storage is device/profile-local;
+clearing site storage loses progress. JSON import is not implemented.

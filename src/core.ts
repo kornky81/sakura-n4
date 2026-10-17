@@ -1,6 +1,6 @@
 import {kanji,questions} from './data';
 export type Activity={id:string;subject:string;correct:boolean;at:string};
-export type Attempt={id:string;at:string;answers:Record<string,number>;score:number;total:number};
+export type Attempt={id:string;examId?:string;at:string;answers:Record<string,number>;score:number;total:number};
 export type State={examDate:string;minutes:number;romaji:boolean;statuses:Record<string,string>;due:Record<string,number>;activity:Activity[];attempts:Attempt[]};
 export const initial:State={examDate:'',minutes:20,romaji:true,statuses:{},due:{},activity:[],attempts:[]};
 export const dateKey=(d=new Date())=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;

@@ -1,0 +1,3 @@
+# Only for regenerating committed MP3s; not required to run the application.
+pyopenjtalk==0.4.1
+numpy>=1.20

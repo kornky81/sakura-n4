@@ -1,0 +1,950 @@
+[
+  {
+    "id": "fv1",
+    "subject": "Vocabulary",
+    "kind": "kanji-reading",
+    "prompt": "この急行は、次の駅には止まりません。\n「急行」の読み方はどれですか。",
+    "options": [
+      "きゅうこう",
+      "きゅこう",
+      "きょうこう",
+      "きゅうごう"
+    ],
+    "answer": 0,
+    "explanation": "急行 is きゅうこう, an express train. The long vowel is required.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv2",
+    "subject": "Vocabulary",
+    "kind": "kanji-reading",
+    "prompt": "ここに住所を書いてください。\n「住所」の読み方はどれですか。",
+    "options": [
+      "じゅしょう",
+      "じゅしょ",
+      "じゅうしょ",
+      "じゅうしょう"
+    ],
+    "answer": 2,
+    "explanation": "住所 = じゅうしょ, address / adresse.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv3",
+    "subject": "Vocabulary",
+    "kind": "kanji-reading",
+    "prompt": "兄は毎日車を運転します。\n「運転」の読み方はどれですか。",
+    "options": [
+      "うんでん",
+      "うんてん",
+      "うてん",
+      "うんどう"
+    ],
+    "answer": 1,
+    "explanation": "運転 = うんてん, driving / kjøring; 運動 is a different word.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv4",
+    "subject": "Vocabulary",
+    "kind": "kanji-reading",
+    "prompt": "使い方の説明を聞きます。\n「説明」の読み方はどれですか。",
+    "options": [
+      "せつめ",
+      "せちめい",
+      "せつまい",
+      "せつめい"
+    ],
+    "answer": 3,
+    "explanation": "説明 = せつめい, explanation / forklaring.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv5",
+    "subject": "Vocabulary",
+    "kind": "kanji-reading",
+    "prompt": "駅員はとても親切でした。\n「親切」の読み方はどれですか。",
+    "options": [
+      "しんせつ",
+      "おやせつ",
+      "しんぜつ",
+      "しせつ"
+    ],
+    "answer": 0,
+    "explanation": "親切 = しんせつ, kind / vennlig.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv6",
+    "subject": "Vocabulary",
+    "kind": "kanji-reading",
+    "prompt": "出かける前に、切符を用意しました。\n「用意」の読み方はどれですか。",
+    "options": [
+      "よい",
+      "ようい",
+      "ようじ",
+      "ゆうい"
+    ],
+    "answer": 1,
+    "explanation": "用意 = ようい, preparation / forberedelse; 用事 is an errand.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv7",
+    "subject": "Vocabulary",
+    "kind": "kanji-reading",
+    "prompt": "世界のいろいろな国を旅行したいです。\n「世界」の読み方はどれですか。",
+    "options": [
+      "せいかい",
+      "せか",
+      "せっかい",
+      "せかい"
+    ],
+    "answer": 3,
+    "explanation": "世界 = せかい, world / verden.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv8",
+    "subject": "Vocabulary",
+    "kind": "orthography",
+    "prompt": "このきょうしつは広いです。\n「きょうしつ」を漢字で書くと、どれですか。",
+    "options": [
+      "教室",
+      "教屋",
+      "校室",
+      "学室"
+    ],
+    "answer": 0,
+    "explanation": "教室 means classroom / klasserom.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv9",
+    "subject": "Vocabulary",
+    "kind": "orthography",
+    "prompt": "週末はかぞくと過ごします。\n「かぞく」を漢字で書くと、どれですか。",
+    "options": [
+      "家旅",
+      "家族",
+      "家庭",
+      "家屋"
+    ],
+    "answer": 1,
+    "explanation": "家族 means family members / familie.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv10",
+    "subject": "Vocabulary",
+    "kind": "orthography",
+    "prompt": "父はこうじょうで働いています。\n「こうじょう」を漢字で書くと、どれですか。",
+    "options": [
+      "工所",
+      "公場",
+      "工場",
+      "工作"
+    ],
+    "answer": 2,
+    "explanation": "工場 is a factory / fabrikk.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv11",
+    "subject": "Vocabulary",
+    "kind": "orthography",
+    "prompt": "車にちゅういしてください。\n「ちゅうい」を漢字で書くと、どれですか。",
+    "options": [
+      "中意",
+      "注目",
+      "主意",
+      "注意"
+    ],
+    "answer": 3,
+    "explanation": "注意する means to pay attention / være oppmerksom.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv12",
+    "subject": "Vocabulary",
+    "kind": "orthography",
+    "prompt": "夏休みのけいかくを立てました。\n「けいかく」を漢字で書くと、どれですか。",
+    "options": [
+      "計画",
+      "計回",
+      "計書",
+      "計話"
+    ],
+    "answer": 0,
+    "explanation": "計画 = plan / plan; 計画を立てる means make a plan.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv13",
+    "subject": "Vocabulary",
+    "kind": "context",
+    "prompt": "雨が降りそうなので、（　）を持っていきます。",
+    "options": [
+      "財布",
+      "傘",
+      "地図",
+      "手紙"
+    ],
+    "answer": 1,
+    "explanation": "傘 is an umbrella / paraply, the item needed for rain.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv14",
+    "subject": "Vocabulary",
+    "kind": "context",
+    "prompt": "電車の時間まであと二分です。（　）ましょう。",
+    "options": [
+      "急ぎ",
+      "休み",
+      "眠り",
+      "遊び"
+    ],
+    "answer": 0,
+    "explanation": "急ぎましょう means let us hurry / la oss skynde oss.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv15",
+    "subject": "Vocabulary",
+    "kind": "context",
+    "prompt": "この問題は難しいので、先生に（　）します。",
+    "options": [
+      "運転",
+      "出発",
+      "質問",
+      "散歩"
+    ],
+    "answer": 2,
+    "explanation": "質問する means ask a question / stille et spørsmål.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv16",
+    "subject": "Vocabulary",
+    "kind": "context",
+    "prompt": "部屋が暗いので、電気を（　）ください。",
+    "options": [
+      "消して",
+      "閉めて",
+      "止めて",
+      "つけて"
+    ],
+    "answer": 3,
+    "explanation": "電気をつける means switch on the light / slå på lyset.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv17",
+    "subject": "Vocabulary",
+    "kind": "context",
+    "prompt": "すみません。この紙を十枚（　）してください。",
+    "options": [
+      "コピー",
+      "シャワー",
+      "ニュース",
+      "エアコン"
+    ],
+    "answer": 0,
+    "explanation": "コピーする means photocopy / kopiere. The other choices are not copying actions.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv18",
+    "subject": "Vocabulary",
+    "kind": "context",
+    "prompt": "熱があって頭が痛いので、今日は会社を（　）。",
+    "options": [
+      "着きます",
+      "休みます",
+      "直します",
+      "渡ります"
+    ],
+    "answer": 1,
+    "explanation": "会社を休む means take a day off work / være borte fra jobb.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv19",
+    "subject": "Vocabulary",
+    "kind": "context",
+    "prompt": "この料理は塩が多すぎて、（　）です。",
+    "options": [
+      "甘い",
+      "軽い",
+      "しょっぱい",
+      "静か"
+    ],
+    "answer": 2,
+    "explanation": "しょっぱい means salty / salt. Excess salt is the clue.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv20",
+    "subject": "Vocabulary",
+    "kind": "context",
+    "prompt": "友達の誕生日に花を（　）。",
+    "options": [
+      "拾いました",
+      "落としました",
+      "捨てました",
+      "贈りました"
+    ],
+    "answer": 3,
+    "explanation": "贈る means give as a gift / gi i gave; a birthday is the context.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv21",
+    "subject": "Vocabulary",
+    "kind": "paraphrase",
+    "prompt": "同じ意味に近い文を選んでください。\nこのかばんは軽いです。",
+    "options": [
+      "重くありません。",
+      "大きくありません。",
+      "安くありません。",
+      "新しくありません。"
+    ],
+    "answer": 0,
+    "explanation": "軽い = not heavy / lett, ikke tung.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv22",
+    "subject": "Vocabulary",
+    "kind": "paraphrase",
+    "prompt": "同じ意味に近い文を選んでください。\nもう一度説明してください。",
+    "options": [
+      "もっと速く話してください。",
+      "また説明してください。",
+      "説明しないでください。",
+      "一人で説明してください。"
+    ],
+    "answer": 1,
+    "explanation": "もう一度 means once more / en gang til.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv23",
+    "subject": "Vocabulary",
+    "kind": "paraphrase",
+    "prompt": "同じ意味に近い文を選んでください。\n約束の時間に間に合いました。",
+    "options": [
+      "約束を忘れました。",
+      "時間が分かりませんでした。",
+      "遅れませんでした。",
+      "約束を変えました。"
+    ],
+    "answer": 2,
+    "explanation": "間に合う means be in time / rekke i tide, so the speaker was not late.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv24",
+    "subject": "Vocabulary",
+    "kind": "paraphrase",
+    "prompt": "同じ意味に近い文を選んでください。\nこの店はいつも込んでいます。",
+    "options": [
+      "いつも休みです。",
+      "いつも安いです。",
+      "いつも静かです。",
+      "いつも人が多いです。"
+    ],
+    "answer": 3,
+    "explanation": "込んでいる means crowded / fullt av folk.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv25",
+    "subject": "Vocabulary",
+    "kind": "usage",
+    "prompt": "「予約」の使い方が正しい文はどれですか。",
+    "options": [
+      "旅行の前にホテルを予約しました。",
+      "階段を予約して二階へ行きました。",
+      "雨を予約したのでぬれました。",
+      "この漢字を予約して覚えました。"
+    ],
+    "answer": 0,
+    "explanation": "予約 means reservation / bestilling. Booking a hotel is conventional usage.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv26",
+    "subject": "Vocabulary",
+    "kind": "usage",
+    "prompt": "「直す」の使い方が正しい文はどれですか。",
+    "options": [
+      "駅から会社まで直しました。",
+      "壊れた時計を直しました。",
+      "友達に本を直しました。",
+      "毎朝、牛乳を直しました。"
+    ],
+    "answer": 1,
+    "explanation": "直す means repair/correct / reparere, rette. A broken watch can be repaired.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv27",
+    "subject": "Vocabulary",
+    "kind": "usage",
+    "prompt": "「慣れる」の使い方が正しい文はどれですか。",
+    "options": [
+      "窓を慣れてください。",
+      "切符を三枚慣れました。",
+      "新しい仕事に慣れました。",
+      "雨が慣れています。"
+    ],
+    "answer": 2,
+    "explanation": "慣れる takes に for what one becomes accustomed to / venne seg til.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fv28",
+    "subject": "Vocabulary",
+    "kind": "usage",
+    "prompt": "「残念」の使い方が正しい文はどれですか。",
+    "options": [
+      "駅まで残念に歩きます。",
+      "この机は残念を食べます。",
+      "残念を三つ買いました。",
+      "試合に負けて残念でした。"
+    ],
+    "answer": 3,
+    "explanation": "残念 describes regret/disappointment / skuffelse, appropriate after losing a match.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fg1",
+    "subject": "Grammar",
+    "kind": "grammar-selection",
+    "prompt": "日本へ行った（　）があります。",
+    "options": [
+      "こと",
+      "もの",
+      "よう",
+      "ため"
+    ],
+    "answer": 0,
+    "explanation": "た-form + ことがある expresses an experience / tidligere erfaring.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fg2",
+    "subject": "Grammar",
+    "kind": "grammar-selection",
+    "prompt": "音楽を（　）ながら料理を作ります。",
+    "options": [
+      "聞く",
+      "聞き",
+      "聞いて",
+      "聞いた"
+    ],
+    "answer": 1,
+    "explanation": "ながら follows the ます-stem: 聞きます → 聞き.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fg3",
+    "subject": "Grammar",
+    "kind": "grammar-selection",
+    "prompt": "明日は試験なので、勉強し（　）なりません。",
+    "options": [
+      "なくても",
+      "ないで",
+      "なければ",
+      "なかった"
+    ],
+    "answer": 2,
+    "explanation": "しなければなりません means must study / må studere.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fg4",
+    "subject": "Grammar",
+    "kind": "grammar-selection",
+    "prompt": "この本は子供でも（　）ます。",
+    "options": [
+      "読む",
+      "読んだ",
+      "読んで",
+      "読め"
+    ],
+    "answer": 3,
+    "explanation": "The potential form 読めます means can read / kan lese.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fg5",
+    "subject": "Grammar",
+    "kind": "grammar-selection",
+    "prompt": "出かける前に、窓を閉めて（　）ます。",
+    "options": [
+      "おき",
+      "いき",
+      "あり",
+      "み"
+    ],
+    "answer": 0,
+    "explanation": "ておく describes advance preparation / gjøre på forhånd.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fg6",
+    "subject": "Grammar",
+    "kind": "grammar-selection",
+    "prompt": "あの空を見てください。雨が（　）そうです。",
+    "options": [
+      "降る",
+      "降り",
+      "降った",
+      "降って"
+    ],
+    "answer": 1,
+    "explanation": "Visual conjecture そう follows the verb stem: 降りそう.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fg7",
+    "subject": "Grammar",
+    "kind": "grammar-selection",
+    "prompt": "友達が来る（　）、部屋を掃除しました。",
+    "options": [
+      "ながら",
+      "のに",
+      "ので",
+      "ても"
+    ],
+    "answer": 2,
+    "explanation": "ので supplies the reason: because a friend is coming, I cleaned.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fg8",
+    "subject": "Grammar",
+    "kind": "grammar-selection",
+    "prompt": "ここでは写真を（　）はいけません。",
+    "options": [
+      "撮る",
+      "撮り",
+      "撮った",
+      "撮って"
+    ],
+    "answer": 3,
+    "explanation": "てはいけない expresses prohibition: 撮ってはいけません.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fg9",
+    "subject": "Grammar",
+    "kind": "grammar-selection",
+    "prompt": "毎朝、野菜を食べる（　）しています。",
+    "options": [
+      "ように",
+      "ためで",
+      "ことが",
+      "そうで"
+    ],
+    "answer": 0,
+    "explanation": "ようにしている describes making a conscious effort / prøve å gjøre regelmessig.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fg10",
+    "subject": "Grammar",
+    "kind": "grammar-selection",
+    "prompt": "この町に住み（　）から、三年になります。",
+    "options": [
+      "始める",
+      "始めて",
+      "始めたら",
+      "始めながら"
+    ],
+    "answer": 1,
+    "explanation": "始めてから means since beginning. Three years have passed since moving here.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fg11",
+    "subject": "Grammar",
+    "kind": "grammar-selection",
+    "prompt": "道が分からない（　）、駅員に聞いてください。",
+    "options": [
+      "ても",
+      "まで",
+      "なら",
+      "しか"
+    ],
+    "answer": 2,
+    "explanation": "なら sets up the condition: if you do not know the way, ask station staff.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fg12",
+    "subject": "Grammar",
+    "kind": "grammar-selection",
+    "prompt": "一人（　）来ました。",
+    "options": [
+      "に",
+      "を",
+      "が",
+      "で"
+    ],
+    "answer": 3,
+    "explanation": "一人で means alone / alene; で marks the manner.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fg13",
+    "subject": "Grammar",
+    "kind": "grammar-selection",
+    "prompt": "この店は日曜日（　）開いています。",
+    "options": [
+      "も",
+      "を",
+      "へ",
+      "が"
+    ],
+    "answer": 0,
+    "explanation": "も means also/even: this shop is open on Sundays too.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked"
+  },
+  {
+    "id": "fg14",
+    "subject": "Grammar",
+    "kind": "sentence-order",
+    "prompt": "私は ___ ___ ★ ___ あります。\n★に入る言葉を選んでください。",
+    "options": [
+      "ことが",
+      "京都へ",
+      "行った",
+      "一度"
+    ],
+    "answer": 2,
+    "explanation": "私は京都へ一度行ったことがあります。The third phrase is 行った.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked",
+    "orderedSolution": [
+      "京都へ",
+      "一度",
+      "行った",
+      "ことが"
+    ]
+  },
+  {
+    "id": "fg15",
+    "subject": "Grammar",
+    "kind": "sentence-order",
+    "prompt": "この本は ___ ___ ★ ___ 人におすすめです。\n★に入る言葉を選んでください。",
+    "options": [
+      "ことが",
+      "日本語を",
+      "勉強した",
+      "ない"
+    ],
+    "answer": 0,
+    "explanation": "この本は日本語を勉強したことがない人におすすめです。The fixed experience construction is 勉強したことがない; the third phrase is ことが.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked",
+    "orderedSolution": [
+      "日本語を",
+      "勉強した",
+      "ことが",
+      "ない"
+    ]
+  },
+  {
+    "id": "fg16",
+    "subject": "Grammar",
+    "kind": "sentence-order",
+    "prompt": "この町は ___ ___ ★ ___ 便利です。\n★に入る言葉を選んでください。",
+    "options": [
+      "買い物に",
+      "駅が",
+      "近い",
+      "ので"
+    ],
+    "answer": 3,
+    "explanation": "この町は駅が近いので買い物に便利です。The dependency is 駅が近い → ので → 買い物に便利; the third phrase is ので.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked",
+    "orderedSolution": [
+      "駅が",
+      "近い",
+      "ので",
+      "買い物に"
+    ]
+  },
+  {
+    "id": "fg17",
+    "subject": "Grammar",
+    "kind": "sentence-order",
+    "prompt": "私は ___ ___ ★ ___ 思います。\n★に入る言葉を選んでください。",
+    "options": [
+      "なりたい",
+      "先生に",
+      "将来",
+      "と"
+    ],
+    "answer": 0,
+    "explanation": "私は将来先生になりたいと思います。Third phrase: なりたい.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked",
+    "orderedSolution": [
+      "将来",
+      "先生に",
+      "なりたい",
+      "と"
+    ]
+  },
+  {
+    "id": "fg18",
+    "subject": "Grammar",
+    "kind": "text-grammar",
+    "prompt": "文章の（1）に入るものはどれですか。",
+    "options": [
+      "分からなくて",
+      "分かるので",
+      "分かったら",
+      "分かりながら"
+    ],
+    "answer": 0,
+    "explanation": "分からなくて connects not knowing the way to being troubled. The following でも contrasts this difficulty.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked",
+    "passage": "先月、この町に引っ越してきました。最初は駅への道も（１）、困りました。でも、隣の人が親切に教えてくれました。今は一人で買い物に行ける（２）なりました。もっと町の人と話したいです。（３）、毎日少しずつ日本語を勉強しています。これからも、毎日勉強する（４）にしました。"
+  },
+  {
+    "id": "fg19",
+    "subject": "Grammar",
+    "kind": "text-grammar",
+    "prompt": "文章の（2）に入るものはどれですか。",
+    "options": [
+      "ために",
+      "ように",
+      "ことに",
+      "そうに"
+    ],
+    "answer": 1,
+    "explanation": "Potential + ようになる describes acquiring an ability: 買い物に行けるようになった.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked",
+    "passage": "先月、この町に引っ越してきました。最初は駅への道も（１）、困りました。でも、隣の人が親切に教えてくれました。今は一人で買い物に行ける（２）なりました。もっと町の人と話したいです。（３）、毎日少しずつ日本語を勉強しています。これからも、毎日勉強する（４）にしました。"
+  },
+  {
+    "id": "fg20",
+    "subject": "Grammar",
+    "kind": "text-grammar",
+    "prompt": "文章の（3）に入るものはどれですか。",
+    "options": [
+      "しかし",
+      "それでも",
+      "そのため",
+      "それなのに"
+    ],
+    "answer": 2,
+    "explanation": "そのため connects wanting to talk more with the purposeful daily study; the other conjunctions imply contrast.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked",
+    "passage": "先月、この町に引っ越してきました。最初は駅への道も（１）、困りました。でも、隣の人が親切に教えてくれました。今は一人で買い物に行ける（２）なりました。もっと町の人と話したいです。（３）、毎日少しずつ日本語を勉強しています。これからも、毎日勉強する（４）にしました。"
+  },
+  {
+    "id": "fg21",
+    "subject": "Grammar",
+    "kind": "text-grammar",
+    "prompt": "文章の（4）に入るものはどれですか。",
+    "options": [
+      "ため",
+      "もの",
+      "こと",
+      "そう"
+    ],
+    "answer": 2,
+    "explanation": "Dictionary form + ことにする expresses a decision: decided to study every day.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked",
+    "passage": "先月、この町に引っ越してきました。最初は駅への道も（１）、困りました。でも、隣の人が親切に教えてくれました。今は一人で買い物に行ける（２）なりました。もっと町の人と話したいです。（３）、毎日少しずつ日本語を勉強しています。これからも、毎日勉強する（４）にしました。"
+  },
+  {
+    "id": "fr1",
+    "subject": "Reading",
+    "kind": "short-reading",
+    "prompt": "会議は何時に始まりますか。",
+    "options": [
+      "二時",
+      "三時",
+      "四時",
+      "四時半"
+    ],
+    "answer": 3,
+    "explanation": "The meeting was changed to 四時半, 4:30. Three was the original time; four is the manager’s return.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked",
+    "passage": "鈴木さんへ。今日の会議は三時からの予定でしたが、部長が四時まで戻らないので、四時半からに変わりました。会議室はいつもの二階の部屋です。資料は私が用意しますから、持ってこなくてもいいです。佐藤"
+  },
+  {
+    "id": "fr2",
+    "subject": "Reading",
+    "kind": "short-reading",
+    "prompt": "昨日、いつもの電車に乗れなかったのはなぜですか。",
+    "options": [
+      "自転車が壊れたから",
+      "バスが遅れたから",
+      "寝坊したから",
+      "駅が休みだったから"
+    ],
+    "answer": 1,
+    "explanation": "The explicit cause is バスが遅れたため: the bus was late / bussen var forsinket.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked",
+    "passage": "私は毎朝、駅まで自転車で行きます。しかし、昨日は雨だったのでバスに乗りました。バスが遅れたため、いつもの電車に乗れませんでした。明日は晴れるそうなので、また自転車で行こうと思います。"
+  },
+  {
+    "id": "fr3",
+    "subject": "Reading",
+    "kind": "short-reading",
+    "prompt": "工事中、本を返したい人はどうしますか。",
+    "options": [
+      "木曜日まで家に置きます。",
+      "二階で係の人に渡します。",
+      "入り口の箱に入れます。",
+      "本棚に自分で戻します。"
+    ],
+    "answer": 2,
+    "explanation": "返す本は入り口の箱に入れてください explicitly gives the return procedure.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked",
+    "passage": "図書館からのお知らせ。来週の月曜日から水曜日まで、本棚の工事をします。この三日間、本を借りることはできません。返す本は入り口の箱に入れてください。木曜日からはいつもどおり利用できます。"
+  },
+  {
+    "id": "fr4",
+    "subject": "Reading",
+    "kind": "medium-reading",
+    "prompt": "森さんが仕事を続けようと思ったきっかけは何ですか。",
+    "options": [
+      "給料が上がったこと",
+      "朝遅く起きられるようになったこと",
+      "お客さんの言葉を聞いたこと",
+      "大学が休みになったこと"
+    ],
+    "answer": 2,
+    "explanation": "A customer’s words helped Mori realize the work was useful; this changed the initial desire to quit.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked",
+    "passage": "大学生の森さんは、去年から駅前のパン屋で働いています。最初は朝早く起きるのが大変で、何度もやめようと思いました。しかし、毎朝来るお客さんが「ここのパンを食べると元気になる」と言ってくれました。その言葉を聞いて、自分の仕事が誰かの役に立っていると分かりました。今では早起きにも慣れました。\n先月、店長に新しいパンのアイデアを聞かれました。森さんは、野菜がたくさん入ったパンを考えました。作るのに時間がかかるので、まだ毎日は売っていません。今は土曜日だけ売って、お客さんの意見を聞いています。森さんは、もっと多くの人に食べてもらいたいと思っています。"
+  },
+  {
+    "id": "fr5",
+    "subject": "Reading",
+    "kind": "medium-reading",
+    "prompt": "新しいパンについて、正しいものはどれですか。",
+    "options": [
+      "毎朝売っています。",
+      "今は土曜日だけ売っています。",
+      "野菜が入っていません。",
+      "作る時間が短いです。"
+    ],
+    "answer": 1,
+    "explanation": "今は土曜日だけ売って states Saturday-only sales; preparation takes time and the bread contains vegetables.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked",
+    "passage": "大学生の森さんは、去年から駅前のパン屋で働いています。最初は朝早く起きるのが大変で、何度もやめようと思いました。しかし、毎朝来るお客さんが「ここのパンを食べると元気になる」と言ってくれました。その言葉を聞いて、自分の仕事が誰かの役に立っていると分かりました。今では早起きにも慣れました。\n先月、店長に新しいパンのアイデアを聞かれました。森さんは、野菜がたくさん入ったパンを考えました。作るのに時間がかかるので、まだ毎日は売っていません。今は土曜日だけ売って、お客さんの意見を聞いています。森さんは、もっと多くの人に食べてもらいたいと思っています。"
+  },
+  {
+    "id": "fr6",
+    "subject": "Reading",
+    "kind": "medium-reading",
+    "prompt": "山へ行く計画を変えたのはなぜですか。",
+    "options": [
+      "山が好きではないから",
+      "電車が動かないから",
+      "博物館が無料だから",
+      "雨の日の山道は危ないから"
+    ],
+    "answer": 3,
+    "explanation": "The weather forecast predicts rain and the text explicitly says wet mountain paths are dangerous.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked",
+    "passage": "山田さんは、友達と日帰りの旅行を計画しています。二人とも山が好きなので、初めは山へ行くつもりでした。しかし、週末は雨が降るという天気予報を聞きました。山道は雨の日には危ないので、今度は海の近くの博物館へ行くことにしました。\n博物館は駅から歩いて二十分です。駅前からバスも出ていますが、一時間に一本しかありません。二人は九時に駅に着く予定です。九時五分のバスに乗れれば、九時十五分に着きます。乗れなかった場合は、次のバスを待たずに歩くことにしました。博物館の中には食堂がないので、駅でお弁当を買ってから行きます。"
+  },
+  {
+    "id": "fr8",
+    "subject": "Reading",
+    "kind": "information-retrieval",
+    "prompt": "平日は十七時まで働いています。平日の夜に参加できる教室はどれですか。",
+    "options": [
+      "Ａだけ",
+      "Ｂだけ",
+      "Ｃだけ",
+      "ＡとＢ"
+    ],
+    "answer": 2,
+    "explanation": "Only C meets on a weekday evening, Wednesday 18:00–20:00. B is Saturday afternoon.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked",
+    "passage": "市民センター・料理教室\nＡ：和食入門　火曜日１０時〜１２時　１回１５００円\nＢ：パン作り　土曜日１４時〜１６時　１回２０００円\nＣ：簡単な夕食　水曜日１８時〜２０時　１回１２００円\n対象：１８歳以上。材料費は料金に含まれます。\n申し込み：参加日の三日前までに電話してください。\n持ち物：エプロン、筆記用具。"
+  },
+  {
+    "id": "fr9",
+    "subject": "Reading",
+    "kind": "information-retrieval",
+    "prompt": "この料理教室について、正しいものはどれですか。",
+    "options": [
+      "材料費を別に払います。",
+      "参加する日に申し込みます。",
+      "何も持っていかなくていいです。",
+      "参加日の三日前までに電話で申し込みます。"
+    ],
+    "answer": 3,
+    "explanation": "The notice requires telephone registration by three days before attendance. Materials are included; an apron and writing tools are needed.",
+    "provenance": "Sakura N4 original, AI-assisted; internal answer review",
+    "reviewStatus": "internally-checked",
+    "passage": "市民センター・料理教室\nＡ：和食入門　火曜日１０時〜１２時　１回１５００円\nＢ：パン作り　土曜日１４時〜１６時　１回２０００円\nＣ：簡単な夕食　水曜日１８時〜２０時　１回１２００円\n対象：１８歳以上。材料費は料金に含まれます。\n申し込み：参加日の三日前までに電話してください。\n持ち物：エプロン、筆記用具。"
+  }
+]

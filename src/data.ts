@@ -1,4 +1,4 @@
-export type Question={id:string;subject:string;prompt:string;options:string[];answer:number;explanation:string;audio?:string};
+export type Question={id:string;subject:string;prompt:string;options:string[];answer:number;explanation:string;audio?:string;kind?:string;passage?:string;audioSrc?:string;transcript?:string;kana?:string;romaji?:string;translationNo?:string;translationEn?:string;spokenText?:string;audioOnlyChoices?:boolean;title?:string;orderedSolution?:string[];reviewStatus?:string;provenance?:string};
 export const kanji=[
 {char:'食',level:'N5',en:'eat',no:'spise',strokes:9,readings:[{type:'on',kana:'ショク',romaji:'shoku',word:'食事',reading:'しょくじ',roman:'shokuji',en:'meal',no:'måltid'},{type:'kun',kana:'た.べる',romaji:'taberu',word:'食べる',reading:'たべる',roman:'taberu',en:'to eat',no:'å spise'}]},
 {char:'飲',level:'N5',en:'drink',no:'drikke',strokes:12,readings:[{type:'on',kana:'イン',romaji:'in',word:'飲食',reading:'いんしょく',roman:'inshoku',en:'food and drink',no:'mat og drikke'},{type:'kun',kana:'の.む',romaji:'nomu',word:'飲む',reading:'のむ',roman:'nomu',en:'to drink',no:'å drikke'}]},
